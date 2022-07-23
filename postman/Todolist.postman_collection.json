@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "cf11866f-03c7-416e-8518-bdb4c22dd196",
+		"name": "Todolist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4441805"
+	},
+	"item": [
+		{
+			"name": "Store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item\": {\n        \"name\" : \"test\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/item/store",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"item",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item\": {\n        \"name\" : \"test\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/items",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item\": {\n        \"completed\": true\n    }\n}"
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/item/1",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{APP_URL}}/api/item/1",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "APP_URL",
+			"value": "http://todolist.test",
+			"type": "string"
+		}
+	]
+}
